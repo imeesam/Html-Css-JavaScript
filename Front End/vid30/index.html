@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+    <style>
+        /* this is varibale declartion method and we have declared clour and semi colour as varible */
+        /* root can ky andr global varibale banty hein  */
+        :root{
+            --colour: rgb(125, 247, 100);
+            --semicolour: rgb(192, 130, 254);
+            --defpad: 23px;
+            --defop:0.2;
+        }
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            list-style: none;
+            padding: var(--defpad);
+            border: 8px solid var(--semicolour);
+            opacity: var(--defop);
+
+        }
+        ul li:first-child{
+            /* local varibale */
+            --colour:rgb(195, 133, 19); 
+            background-color:  var(--colour, rgb(5, 5, 246));
+
+        }
+
+        div :first-child {
+            background-color: rgb(4, 255, 155);
+            background-color: var(--colour);
+            /* we can use var function to use variables */
+        }
+
+        .container {
+            /* background-color: rgb(0, 217, 255); */
+            background-color: var(--semicolour);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <ul>
+            <li>Home</li>
+            <li>about</li>
+            <li>Contact</li>
+        </ul>
+
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate impedit deserunt iure commodi hic eaque
+        laboriosam fugiat exercitationem amet quo eligendi, beatae quibusdam cum distinctio, saepe quod repellendus unde
+        minus fugit tenetur magni! Nulla aspernatur quos veniam optio quis ut harum, quaerat assumenda incidunt sunt!
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selector</title>
+    <style>
+        /* element selctor */
+        div {
+            background-color: red;
+        }
+
+        .red {
+            background-color: aqua;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        /* child selector   direct child per cheezyen apply hongyi   */
+
+        div>p {
+            color: aquamarine;
+            background-color: blueviolet;
+        }
+
+        /* desecndent selector  */
+        div p {
+            color: rgb(204, 240, 0);
+            background-color: rgb(2, 6, 255);
+            /* universal selctor  */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* pseudo slector  */
+        a:visited {
+            color: rgb(200, 255, 0);
+        }
+
+        a:link {
+            color: aqua;
+        }
+
+        a:active {
+            color: palevioletred;
+        }
+        a:hover{
+            background-color: purple;
+        }
+    </style>
+</head>
+  
+<body>
+    <div>
+        i am a div
+        <article>
+            <p>i am a child of div </p>
+
+        </article>
+    </div>
+    <div class="red">
+        i am another div
+    </div>
+    <div id="green">
+        i am another another div
+    </div>
+    <div>
+        <a href="https://www.google.com"> go to google</a>
+        <a href="https://www.facebook.com"> go to Facebook</a>
+    </div>
+</body>
+
+</html>
